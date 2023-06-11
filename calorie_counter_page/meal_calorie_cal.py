@@ -3,9 +3,10 @@ import json
 
 end_pt_url = " https://trackapi.nutritionix.com/v2/natural/nutrients"
 
+food_item = input("Enter food and its amount (Ex. 1 cup veg cup soup): ")
+
 query = {
- "query":"20 grams potato",
-  "timezone": "US/Eastern"
+ "query":food_item,
 }
 api_id = "66e88fcd"
 api_key = "915bd34e3996d68e870d3be75c07b467"
