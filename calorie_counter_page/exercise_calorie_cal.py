@@ -3,12 +3,18 @@ import json
 
 end_pt_url = " https://trackapi.nutritionix.com/v2/natural/exercise"
 
+Exercise = input("Enter exercise with duration/count (Ex. Running 3 miles): ")
+Gender = input("Enter gender: ") #female
+Wt = int(input("Enter weight in kgs: ")) #72.5
+Ht = int(input("Enter Height in cms: ")) # 167.64
+Age = int(input("Enter age: " )) # 20
+
 query = {
- "query":"30 minutes aerobics",
- "gender":"female",
- "weight_kg":72.5,
- "height_cm":167.64,
- "age":30
+ "query":Exercise,
+ "gender":Gender,
+ "weight_kg":Wt,
+ "height_cm":Ht,
+ "age":Age
 }
 api_id = "66e88fcd"
 api_key = "915bd34e3996d68e870d3be75c07b467"
