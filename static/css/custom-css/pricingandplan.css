@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* outline: 1px solid red; */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 100%;
+  font-style: normal !important;
+  background-color: #0A0A0A;
+}
+
+.btn {
+  border-radius: 0 !important;
+}
+
+.navbar-color {
+  background-color: #fff !important;
+}
+
+.index-header {
+  min-height: 900px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.4)),
+    url('../../img/background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
+}
+
+.header-text-h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 73px;
+  letter-spacing: 0.05em;
+}
+
+.header-text-h1-hide {
+  display: none !important;
+}
+
+.header-text-h2 {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 44px;
+  letter-spacing: 0.05em;
+  color: #ff4301;
+}
+
+.header-text-pos {
+  position: absolute;
+  top: 402px;
+  left: 58px;
+}
+
+.slanted {
+  width: 240px;
+  height: 456px;
+  background-image: url('../../img/slantedrectangle.png');
+  background-repeat: no-repeat;
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+.pricing-pos {
+  position: relative;
+}
+
+.element-absolute {
+  position: absolute;
+  top: 66px;
+  left: 40px;
+}
+
+.main-pricing-text {
+  margin-bottom: 4rem;
+}
+
+.main-pricing-text h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff4301;
+}
+
+.main-pricing-text h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.pricing-text-h1,
+.pricing-text-h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.pricing-text-h3 {
+  color: #ff4301;
+}
+
+.pricing-text-p {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 27px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.btn-danger {
+  color: #fff;
+  background: #ff4301;
+  border-color: #ff4301;
+}
+
+.direction-container {
+  display: none !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .slanted {
+    width: 240px;
+    height: 456px;
+    margin: 0 auto;
+    background-image: url('../../img/slantedrectangle-small.png');
+    background-repeat: no-repeat;
+    color: #ffffff;
+  }
+
+  /* .main-pricing-section {
+    position: absolute;
+    top: 314%;
+    left: 20%;
+  } */
+
+  .element-absolute {
+    position: absolute;
+    top: 82px;
+    left: 26px;
+  }
+
+  .pricing-text-p {
+    line-height: 22px;
+    font-size: 11px;
+  }
+
+  .pricing-text-h1 {
+    font-size: 1rem;
+  }
+
+  .pricing-text-h3 {
+    font-size: 1rem;
+  }
+
+  .pricing-spacing {
+    margin-right: 60px;
+  }
+
+  /* .enroll-btn {
+    width: 6rem !important;
+    height: 38px !important;
+    margin: 10px 0 !important;
+    padding: 6px !important;
+  } */
+
+  /* .btn-text {
+    font-size: 0.7rem !important;
+  } */
+}
+
+@media only screen and (max-width: 760px) {
+  /* .main-pricing-section {
+    position: absolute;
+    top: 416%;
+    left: 40%;
+  } */
+
+  .slanted {
+    margin: 0 auto;
+    margin-left: 10rem;
+  }
+
+  .pricing-section {
+    margin-top: 200px;
+  }
+
+  /* .main-pricing-text {
+    margin-bottom: 4rem;
+  } */
+
+  .main-pricing-text h2,
+  .main-pricing-text h3 {
+    text-align: center;
+  }
+
+  .header-text-h1 {
+    display: none !important;
+  }
+
+  .header-text-h1-hide {
+    display: block !important;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 0.05em;
+    text-align: left;
+  }
+
+  .header-text-h2 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-align: left;
+  }
+
+  .main-pricing-text h2 {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  .main-pricing-text h3 {
+    width: 200px;
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  .direction-container {
+    margin-top: 120px !important;
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .direction-img {
+    margin: 0 auto;
+  }
+
+  .direction-container {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .main-pricing-text h2 {
+    font-size: 20px;
+  }
+
+  .main-pricing-text h3 {
+    font-size: 18px;
+  }
+
+  .header-text-pos {
+    text-align: center;
+  }
+
+  .header-text-h2 {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 498px) {
+  .slanted {
+    margin: 0 auto;
+    margin-left: 8rem;
+  }
+}
+
+@media only screen and (max-width: 498px) {
+  .slanted {
+    margin: 0 auto;
+    margin-left: 7rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  /* .main-pricing-section {
+    position: absolute;
+    top: 416%;
+    left: 30%;
+  } */
+}
+
+@media only screen and (max-width: 396px) {
+  .slanted {
+    margin: 0 auto;
+    margin-left: 6rem;
+  }
+}
+
+@media only screen and (max-width: 368px) {
+  .slanted {
+    margin: 0 auto;
+    margin-left: 5rem;
+  }
+}
