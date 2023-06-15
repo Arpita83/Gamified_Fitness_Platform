@@ -156,4 +156,4 @@ def calculate_calories_burnt():
     return render_template('submit.html', calories_burnt=calories_burnt)
 
 if __name__=='__main__':
-    app.run(debug=False, host = '0.0.0.0')
+    app.run(debug=True)
