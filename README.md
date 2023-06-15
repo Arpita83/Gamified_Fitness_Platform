@@ -52,3 +52,7 @@ With growing concerns about health and the addictive nature of games, we need a 
 **# Target Audience:**
 
 The web application targets gamers, fitness enthusiasts, health-conscious individuals, and those with limited time for exercise, offering a unique blend of entertainment and physical activity. It caters to individuals of all age groups, providing a convenient and engaging solution to combat sedentary lifestyles and promote active living.
+
+**# To run:**
+
+Install Flask and run app.py to get the link to FitBeat!
