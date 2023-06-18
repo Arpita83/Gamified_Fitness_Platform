@@ -3,6 +3,44 @@
 
 
 <head>
+    <style>
+        .container {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+       }
+       
+       .member {
+         flex-basis: calc(33.33% - 20px);
+         margin-bottom: 20px;
+         text-align: center;
+         position: relative;
+         cursor: pointer;
+       }
+       
+       .member img {
+         width: 100%;
+         height: auto;
+       }
+       
+       .text {
+         margin-top: 10px;
+         opacity: 0;
+         position: absolute;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background-color: rgba(0, 0, 0, 0.8);
+         color: #fff;
+         padding: 10px;
+         transition: opacity 0.3s ease;
+       }
+       
+       .member:hover .text {
+         opacity: 1;
+       }
+       </style>
+    
     <meta charset="utf-8">
     <title>About FitBeat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -207,28 +245,63 @@
 
 
                         </div>
-                        <p><B><center> <span style="color:#FFCC00"><i class="fa fa-pagelines"></i></span> Earn
-                                rewards:</B> Conquer challenges, unlock achievements, and collect points to showcase
-                            your progress and accomplishments. Let your hard work be recognized!</center></p>
-                        <p><B><center> <span style="color: #FFCC00;"><i class="fa fa-pagelines"></i></span> Engaging
-                                workouts:</B> Immerse yourself in a variety of workout routines designed to make
-                            exercising enjoyable. Our interactive games will keep you engaged and motivated throughout
-                            your fitness journey.</center></p>
-                        <p><B><center> <span style="color: #FFCC00;"><i class="fa fa-pagelines"></i></span> Track your
-                                progress:</B> Stay on top of your fitness goals with our intuitive tracking system.
-                            Monitor your daily activity, calories burned, and see your improvements over time.</center></p>
-                        <p><B><center> <span style="color: #FFCC00;"><i class="fa fa-pagelines"></i></span> Connect with a
-                                community:</B> Join a vibrant community of fitness enthusiasts like yourself. Share your
-                            accomplishments, get inspired by others, and cheer each other on. Together, we can achieve
-                            greatness!</center></p>
-                        <p><B><center> <span style="color: #FFCC00;"><i class="fa fa-pagelines"></i></span> Expert advice:</B>
-                            Explore our health page, featuring blogs and trusted resources from renowned fitness
-                            experts. Learn tips, techniques, and valuable insights to enhance your overall well-being.
-                        </center></p>
-                        <p><B><center> <span style="color: #FFCC00;"><i class="fa fa-pagelines"></i></span> Challenge
-                                yourself:</B> Take on different game levels, from easy to hard, and push your limits.
-                            With each level, you'll unlock new challenges and exciting adventures to keep you motivated.
-                        </center></p><br>
+                        <div class="container">
+                            <div class="member">
+                              <img src="/static/img/about1.png" alt="Image">
+                              <div class="text">
+                                <p>
+                                  <strong><span style="color:#FFCC00">Earn rewards:</span></strong> Conquer challenges, unlock achievements, and collect points to showcase your progress and accomplishments. Let your hard work be recognized!
+                                </p>
+                              </div>
+                            </div>
+                            <div class="member">
+                              <img src="/static/img/about2.png" alt="Image">
+                              <div class="text">
+                                <p>
+                                  <strong><span style="color:#FFCC00">Engaging workouts:</span></strong> Immerse yourself in a variety of workout routines designed to make
+                                                      exercising enjoyable. Our interactive games will keep you engaged and motivated throughout
+                                                      your fitness journey.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="member">
+                              <img src="/static/img/about3.png" alt="Image">
+                              <div class="text">
+                                <p>
+                                  <strong><span style="color:#FFCC00">Track your progress:</span></strong>Stay on top of your fitness goals with our intuitive tracking system.
+                                                      Monitor your daily activity, calories burned, and see your improvements over time.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="member">
+                              <img src="/static/img/about4.png" alt="Image">
+                              <div class="text">
+                                <p>
+                                  <strong><span style="color:#FFCC00">Connect with a community:</span></strong>Join a vibrant community of fitness enthusiasts like yourself. Share your
+                                                      accomplishments, get inspired by others, and cheer each other on. Together, we can achieve
+                                                      greatness!
+                                </p>
+                              </div>
+                            </div>
+                            <div class="member">
+                              <img src="/static/img/about5.png" alt="Image">
+                              <div class="text">
+                                <p>
+                                  <strong><span style="color:#FFCC00"> Expert advice:</span></strong>Explore our health page, featuring blogs and trusted resources from renowned fitness
+                                                      experts. Learn tips, techniques, and valuable insights to enhance your overall well-being.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="member">
+                              <img src="/static/img/about6.png" alt="Image">
+                              <div class="text">
+                                <p>
+                                  <strong><span style="color:#FFCC00">Challenge yourself:</span></strong>Take on different game levels, from easy to hard, and push your limits.
+                                                      With each level, you'll unlock new challenges and exciting adventures to keep you motivated.
+                                </p>
+                              </div>
+                            </div>
+                           </div>
 
                         <p><center>Get ready to transform your fitness routine into an exhilarating experience! Join FitBeat
                             today and embark on a journey towards a healthier, happier you.</center></p>
