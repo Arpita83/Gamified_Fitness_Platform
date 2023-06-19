@@ -3,6 +3,51 @@
 
 
 <head>
+    <style>
+        .container {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+       }
+       
+       .member {
+         flex-basis: calc(33.33% - 20px);
+         margin-bottom: 20px;
+         text-align: center;
+         position: relative;
+         cursor: pointer;
+       }
+       
+       .member img {
+         width: 100%;
+         height: auto;
+       }
+       
+       .text {
+         margin-top: 10px;
+         opacity: 0;
+         position: absolute;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background-color: rgba(0, 0, 0, 0.8);
+         color: #fff;
+         padding: 10px;
+         transition: opacity 0.3s ease;
+       }
+       
+       .member:hover .text {
+         opacity: 1;
+       }
+    .custom-line {
+        border: none;
+        height: 2px;
+        background-color: #b792c8;
+    }
+</style>
+
+
+
     <meta charset="utf-8">
     <title>About FitBeat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -130,12 +175,12 @@
                     <h2>Health_Links</h2>
                 </a>
             </li>
-            <li class="icon-box">
+            <!-- <li class="icon-box">
                 <i class="fa fa-user"></i>
                 <a href="meet_the_team.html">
                     <h2>Meet_The_Team</h2>
                 </a>
-            </li>
+            </li> -->
 
         </ul>
         <!-- Fixed Navigation Ends -->
@@ -154,7 +199,7 @@
                     </li>
                     <li><a href="blog.html"><i class="fa fa-pencil"></i><span>Health Blogs</span></a></li>
                     <li><a href="video.html"><i class="fa fa-external-link"></i><span>Health Links</span></a></li>
-                    <li><a href="meet_the_team.html"><i class="fa fa-user"></i><span>The Team</span></a>
+                    <!-- <li><a href="meet_the_team.html"><i class="fa fa-user"></i><span>The Team</span></a> -->
                     </li>
 
                 </ul>
@@ -167,81 +212,276 @@
     <!-- Header Ends -->
     <!-- Page Title Starts -->
     <section class="title-section text-left text-sm-center revealator-slideup revealator-once revealator-delay1">
-        <h1>FIT<span>BEAT</span></h1>
-        <span class="title-bg">Home</span>
-        <h3>get Fit to the Beat</h3>
+        <h1>About<span> Us</span></h1>
+        <span class="title-bg">Fitbeat</span>
+        <!-- <h3>get Fit to the Beat</h3> -->
     </section>
     <!-- Page Title Ends -->
     <!-- Main Content Starts -->
     <section class="main-content revealator-slideup revealator-once revealator-delay1">
         <div class="container">
             <div class="row">
+                <!-- <hr class="custom-line"> -->
                 <!-- Article Starts -->
                 <article class="col-30">
                     <h1 class="text-uppercase text-capitalize">
-                        <center>Welcome to FitBeat!</center>
+                        <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3" style = "color: #b792c8;">
+                        <center><h2><u>Welcome to FitBeat!</h2></u></center></h3>
                     </h1>
                     <!-- Meta Starts -->
                     <div class="meta open-sans-font">
-                        <h4><span>
+                        <h5><span><p class="open-sans-font mb-3">
+                            <!-- <img src="/static/img/home.jpg" class="img-fluid" alt="Blog image" /> -->
                                 <center>Join our immersive world of gamified fitness, where you can level up your health
                                     while having fun. With FitBeat, you'll enjoy the perfect fusion of gaming and
-                                    exercise, helping you stay fit, motivated, and entertained.</center>
-                            </span></h4>
-<br>
-<br>
+                                    exercise, helping you stay fit, motivated, and entertained.</center></p>
+                            </span></h5>
 
                     </div>
                     <!-- Meta Ends -->
                     <!-- Article Content Starts -->
 
-                    <center><img src="/static/img/home.jpg" class="img-fluid" alt="Blog image" /></center>
+                    
                     <div class="blog-excerpt open-sans-font pb-5">
                         <div class="meta open-sans-font">
                             <br>
                             <br><center>
-                            <h1 class="text-uppercase text-capitalize">Earn Rewards and Level Up with FitBeat Points!
-                            </h1>
-                            <h3><span style="color: #FFCC00;">What do you need to do?</span></h3>
-                            <br></center>
+                            <h1 class="text-uppercase text-capitalize"><h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3">Earn Rewards and Level Up with FitBeat Points!</h3>
+                            </h1></center><br>
+                            <!-- <hr class="custom-line"> -->
+                            <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3" style = "color: #b792c8;">
+                                <b><u><center>What do you need to do?</center></u></b></h3>
+                            <br>
 
 
                         </div>
-                        <p><B><center> <span style="color:#FFCC00"><i class="fa fa-pagelines"></i></span> Earn
-                                rewards:</B> Conquer challenges, unlock achievements, and collect points to showcase
-                            your progress and accomplishments. Let your hard work be recognized!</center></p>
-                        <p><B><center> <span style="color: #FFCC00;"><i class="fa fa-pagelines"></i></span> Engaging
-                                workouts:</B> Immerse yourself in a variety of workout routines designed to make
-                            exercising enjoyable. Our interactive games will keep you engaged and motivated throughout
-                            your fitness journey.</center></p>
-                        <p><B><center> <span style="color: #FFCC00;"><i class="fa fa-pagelines"></i></span> Track your
-                                progress:</B> Stay on top of your fitness goals with our intuitive tracking system.
-                            Monitor your daily activity, calories burned, and see your improvements over time.</center></p>
-                        <p><B><center> <span style="color: #FFCC00;"><i class="fa fa-pagelines"></i></span> Connect with a
-                                community:</B> Join a vibrant community of fitness enthusiasts like yourself. Share your
-                            accomplishments, get inspired by others, and cheer each other on. Together, we can achieve
-                            greatness!</center></p>
-                        <p><B><center> <span style="color: #FFCC00;"><i class="fa fa-pagelines"></i></span> Expert advice:</B>
-                            Explore our health page, featuring blogs and trusted resources from renowned fitness
-                            experts. Learn tips, techniques, and valuable insights to enhance your overall well-being.
-                        </center></p>
-                        <p><B><center> <span style="color: #FFCC00;"><i class="fa fa-pagelines"></i></span> Challenge
-                                yourself:</B> Take on different game levels, from easy to hard, and push your limits.
-                            With each level, you'll unlock new challenges and exciting adventures to keep you motivated.
-                        </center></p><br>
+                        <div class="container">
+                            <div class="member">
+                              <img src="/static/img/about1.png" alt="Image">
+                              <div class="text">
+                                <p>
+                                  <strong><span style="color:#b792c8">Ean rewards:</span></strong> Conquer challenges, unlock achievements, and collect points to showcase your progress and accomplishments. Let your hard work be recognized!
+                                </p>
+                              </div>
+                            </div>
+                            <div class="member">
+                              <img src="/static/img/about2.png" alt="Image">
+                              <div class="text">
+                                <p>
+                                  <strong><span style="color:#b792c8">Engaging workouts:</span></strong> Immerse yourself in a variety of workout routines designed to make
+                                                      exercising enjoyable. Our interactive games will keep you engaged and motivated throughout
+                                                      your fitness journey.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="member">
+                              <img src="/static/img/about3.png" alt="Image">
+                              <div class="text">
+                                <p>
+                                  <strong><span style="color:#b792c8">Track your progress:</span></strong> Stay on top of your fitness goals with our intuitive tracking system.
+                                                      Monitor your daily activity, calories burned, and see your improvements over time.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="member">
+                              <img src="/static/img/about4.png" alt="Image">
+                              <div class="text">
+                                <p>
+                                  <strong><span style="color:#b792c8">Connect with a community:</span></strong> Join a vibrant community of fitness enthusiasts like yourself. Share your
+                                                      accomplishments, get inspired by others, and cheer each other on. Together, we can achieve
+                                                      greatness!
+                                </p>
+                              </div>
+                            </div>
+                            <div class="member">
+                              <img src="/static/img/about5.png" alt="Image">
+                              <div class="text">
+                                <p>
+                                  <strong><span style="color:#b792c8"> Expert advice:</span></strong> Explore our health page, featuring blogs and trusted resources from renowned fitness
+                                                      experts. Learn tips, techniques, and valuable insights to enhance your overall well-being.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="member">
+                              <img src="/static/img/about6.png" alt="Image">
+                              <div class="text">
+                                <p>
+                                  <strong><span style="color:#b792c8">Challenge yourself:</span></strong> Take on different game levels, from easy to hard, and push your limits.
+                                                      With each level, you'll unlock new challenges and exciting adventures to keep you motivated.
+                                </p>
+                              </div>
+                            </div>
+                           </div>
 
-                        <p><center>Get ready to transform your fitness routine into an exhilarating experience! Join FitBeat
-                            today and embark on a journey towards a healthier, happier you.</center></p>
-                        <p><center><b>Remember, fitness and fun go hand in hand!</b></center></p>
+                        <p><center><h5>Get ready to transform your fitness routine into an exhilarating experience! Join FitBeat
+                            today and embark on a journey towards a healthier, happier you.</h5></center></p>
+                        <p><center><h5><b>Remember, fitness and fun go hand in hand!</b></h5></center></p>
 
                     </div>
+                    <!-- <section class="title-section text-left text-sm-center revealator-slideup revealator-once revealator-delay1">
 
+                        <h1>Meet the <span>Team</span></h1>
+                        <span class="title-bg">FitBeat</span>
+                
+                    </section> -->
+                    <!-- Page Title Ends -->
+                    <!-- Main Content Starts -->
+                    <!-- <hr class="custom-line">
+                     -->
+                    <h1 class="text-uppercase text-capitalize">
+                        <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3" style = "color: #b792c8;">
+                        <center><h2><u>Meet the amazing team!</h2></u></center></h3>
+                    </h1>
+                    <!-- <hr class="custom-line"> -->
+                    <section class="main-content revealator-slideup revealator-once revealator-delay1">
+                        
+                    
+                        <br>
+                        <div class="container">
+                            <!-- Articles Starts -->
+                            <div class="row">
+                                <!-- Article Starts -->
+                                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                                    <article class="post-container">
+                                        <div class="post-thumb">
+                                            <a href="https://www.linkedin.com/in/ms-suhana-491949224/"
+                                                class="d-block position-relative overflow-hidden">
+                                                <img src="/static/img/team/suhana.jpeg" class="img-fluid" alt="Blog Post">
+                                            </a>
+                                        </div>
+                                        <div class="post-content">
+                                            <div class="entry-header">
+                                                <h3><a href="https://www.linkedin.com/in/ms-suhana-491949224/"><center>Suhana</center></a></h3>
+                                            </div>
+                                            <div class="entry-content open-sans-font">
+                                                <p><center>
+                                                    Meet Suhana, our talented team leader for the FitBeat project. With expertise in web
+                                                    development and machine learning, she played a crucial role in driving our success.</center>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                                    <article class="post-container">
+                                        <div class="post-thumb">
+                                            <a href="https://www.linkedin.com/in/anushka-bhandarkar-21094622a"
+                                                class="d-block position-relative overflow-hidden">
+                                                <img src="/static/img/team/anushka.jpeg" class="img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post-content">
+                                            <div class="entry-header">
+                                                <h3><a href="https://www.linkedin.com/in/anushka-bhandarkar-21094622a"><center>Anushka Bhandarkar</center></a>
+                                                </h3>
+                                            </div>
+                                            <div class="entry-content open-sans-font">
+                                                <p><center>Introducing Anushka, our web developer, who excelled in pushing boundaries,
+                                                    delivering exceptional web experiences, and exploring her creative prowess.</center></p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <!-- Article Ends -->
+                                <!-- Article Starts -->
+                                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                                    <article class="post-container">
+                                        <div class="post-thumb">
+                                            <a href="https://www.linkedin.com/in/arpita-4b867722b/"
+                                                class="d-block position-relative overflow-hidden">
+                                                <img src="/static/img/team/arpita.jpeg" class="img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post-content">
+                                            <div class="entry-header">
+                                                <h3><a href="https://www.linkedin.com/in/arpita-4b867722b/"><center>Arpita</center></a></h3>
+                                            </div>
+                                            <div class="entry-content open-sans-font">
+                                                <p><center>Meet Arpita, a talented full-stack developer of our FitBeat team. With her
+                                                    exceptional skills, Arpita played a crucial role in building and
+                                                    maintaining FitBeat.</center>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <!-- Article Ends -->
+                            </div>
+                            <div class="row justify-content-center">
+                                <!-- Article Starts -->
+                                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                                    <article class="post-container">
+                                        <div class="post-thumb">
+                                            <a href="https://www.linkedin.com/in/harinee-j-298529234/"
+                                                class="d-block position-relative overflow-hidden">
+                                                <img src="/static/img/team/harinee.jpeg" class="img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post-content">
+                                            <div class="entry-header">
+                                                <h3><a href="https://www.linkedin.com/in/harinee-j-298529234/"><center>Harinee J</center></a></h3>
+                                            </div>
+                                            <div class="entry-content open-sans-font">
+                                                <p>
+                                                <center>Introducing Harinee, a valued member of our FitBeat team. With a passion for
+                                                    ML, she brought her expertise and enthusiasm to help us achieve
+                                                    our goals.</center>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <!-- Article Ends -->
+                                <!-- Article Starts -->
+                                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                                    <article class="post-container">
+                                        <div class="post-thumb">
+                                            <a href="https://www.linkedin.com/in/tanishka-yagneshwar"
+                                                class="d-block position-relative overflow-hidden">
+                                                <img src="/static/img/team/tanishka.jpeg" class="img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post-content">
+                                            <div class="entry-header">
+                                                <h3><a href="https://www.linkedin.com/in/tanishka-yagneshwar"><center>Tanishka Yagneshwar</center></a></h3>
+                                            </div>
+                                            <div class="entry-content open-sans-font">
+                                                <p><center>Meet Tanishka, our enthusiastic ML aficionado, delved into pushing boundaries, delivering
+                                                    ML solutions and exploring her passion for data.</center></p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <!-- Article Ends -->
+                            </div>
+                            <!-- Articles Ends -->
+                        </div>
+                                <!-- Article Ends -->
+                
+                                <!-- Article Ends -->
+                                <!-- Pagination Starts -->
+                                <div class="col-12 mt-4">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination justify-content-center mb-0">
+                                            <!-- <li class="page-item active"><a class="page-link" href="#">1</a></li> -->
+                                            <!-- <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">4</a></li> -->
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- Pagination Ends -->
+                            </div>
+                            <!-- Articles Ends -->
+                        </div>
+                
+                    </section>
                     <!-- Article Content Ends -->
                 </article>
                 <!-- Article Ends -->
             </div>
         </div>
-    </section>
+
     <!-- Template JS Files -->
     <script src="/static/js/jquery-3.5.0.min.js"></script>
     <script src="/static/js/styleswitcher.js"></script>
