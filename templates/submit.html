@@ -31,7 +31,14 @@
 
     <!-- Modernizr JS File -->
     <script src="/static/js/modernizr.custom.js"></script>
-    
+    <style>
+        .purple-box {
+            background-color: purple;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body class="blog">
@@ -164,7 +171,7 @@
         <h1>Calorie Counter <span>Result</span></h1>
         <span class="title-bg">FitBeat</span>
     </section>
-    <h2><p><center>The calculated calories lost are: {{ calories_burnt }}</center></p></h2>
+    <h2><p><center>The calculated calories lost are:<div class="purple-box"> {{ calories_burnt }}</div></center></p></h2>
     <br>
     <h4><center>"Calories are like puzzle pieces, and we hold the power to create a masterpiece with each choice we make."</center></h4>
     <style>
