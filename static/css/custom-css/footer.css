@@ -1,5 +1,5 @@
 footer {
-  background: #0D0D0D;
+  background: #000000;
   color: #FFFFFF;
 }
 
@@ -7,8 +7,8 @@ footer h5 {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 1px;
+  line-height: 2px;
   color: #FF4301;
   text-transform: uppercase;
 }
@@ -20,8 +20,8 @@ footer ul li {
 footer ul li a {
   color: #FFFFFF;
   text-transform: uppercase;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 4px;
+  line-height: 1px;
 }
 
 footer ul li a:hover {
@@ -31,9 +31,9 @@ footer ul li a:hover {
 
 footer span {
   color: #FF4301;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
+  font-weight: 50;
+  font-size: 1px;
+  line-height: 2px;
   text-transform: capitalize;
 }
 
@@ -43,12 +43,12 @@ footer .btn-subscribe {
 }
 
 .custom-wrapper {
-  padding: 1.5rem 0rem;
+  padding: 0.5rem 0rem;
 }
 
 .footer-p {
   font-size: 15px;
-  line-height: 15px;
+  line-height: 5px;
 }
 
 
@@ -73,15 +73,15 @@ footer .btn-subscribe {
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 1px;
   }
 
   footer svg {
-    width: 15px;
+    width: 5px;
     padding: 0px;
   }
 
   .custom-wrapper {
-    padding: 1.5rem 0rem;
+    padding: 1rem 0rem;
   }
 }

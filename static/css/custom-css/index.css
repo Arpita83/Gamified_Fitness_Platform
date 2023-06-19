@@ -30,7 +30,7 @@ body {
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.65);
+  background: #78488e;
   content: '';
   top: 0;
   left: 0;
@@ -64,11 +64,12 @@ body {
 }
 
 .text__color {
-  color: #FF4301;
+  color: #78488e;
 }
 
 .btn {
-  background-color: #FF4301;
+  background-color: #78488e;
+  border: #FFFFFF;
   color: #FFFFFF;
   height: 34.86px;
   font-style: normal;
@@ -80,9 +81,15 @@ body {
   padding-top: 9.96px;
   padding-bottom: 9.96px;
 }
+.btn-register .btn-register:hover{
+  background-color: #330548;
+  border: #FFFFFF;
+  color: #FFFFFF;
+
+}
 
 .section-intro {
-  background-color: #0A0A0A;
+  background-color: #78488e;
 }
 
 .intro-reasons {
@@ -100,7 +107,7 @@ body {
   font-size: 15px;
   line-height: 18px;
   letter-spacing: 0.05em;
-  color: #FF4301;
+  color: #330548;
 }
 
 .intro-reasons__sub-margin {
@@ -118,7 +125,7 @@ body {
 .icon-box {
   width: 50px;
   height: 50px;
-  background-color: #151515;
+  background-color: #78488e;
   border-radius: 50%;
   margin-bottom: 4px;
 }
@@ -147,7 +154,7 @@ body {
 }
 
 .section-services {
-  background-color: rgba(13, 13, 13, 0.96);
+  background-color: #78488e(13, 13, 13, 0.96);
 }
 
 .services {
@@ -160,7 +167,7 @@ body {
 }
 
 .service {
-  background-color: #0A0A0A;
+  background-color: #78488e;
 
 }
 
@@ -222,7 +229,7 @@ body {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
-  color: #FF4301;
+  color: #330548;
 }
 
 .service-title__heading-1 {
@@ -234,7 +241,7 @@ body {
 }
 
 .arrow-box {
-  background-color: #171717;
+  background-color: #330548;
 }
 
 .register {
@@ -435,7 +442,7 @@ figure{
 }
 
 .carousel-indicators .active {
-  background-color: #FF4301;
+  background-color: #330548;
 }
 
 .carousel-inner {
@@ -457,7 +464,7 @@ figure{
 .address-icon-box {
   width: 40px;
   height: 40px;
-  background-color: #FF4301;
+  background-color: #330548;
   border-radius: 50%;
 }
 
@@ -554,7 +561,7 @@ figure{
 
 #info-links:hover,
 #info-links:active {
-  color: #FF4301;
+  color: #330548;
   text-decoration: none;
 }
 
@@ -615,6 +622,7 @@ hr {
     padding-right: 28px;
     padding-top: 18px;
     padding-bottom: 16px;
+
   }
 
   .intro-reasons {
@@ -759,7 +767,7 @@ hr {
     font-weight: 800;
     font-size: 40px;
     line-height: 49px;
-    color: #FF4301;
+    color: #330548;
   }
 
   #plans {

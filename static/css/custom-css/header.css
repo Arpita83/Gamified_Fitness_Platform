@@ -1,5 +1,5 @@
 header {
-  background: #0D0D0D;
+  background: #330548;
   padding: 0 8.75rem;
   z-index: 999;
   position: relative;
@@ -12,19 +12,21 @@ header .container-fluid {
 }
 
 .navbar-nav .nav-link:hover {
-  background-color: #ff4301 !important;
+  background-color: #330548 !important;
+  color: #ffffff;
+  border-radius: 40%;
 }
 
 .navbar-light .navbar-nav .nav-link.active {
-  color: #ff916b !important;
+  color: #ac7ec0 !important;
 }
 
 a.dropdown-item.active {
-  background-color: #ff4301 !important;
+  background-color: #330548 !important;
 }
 
 .carousel .carousel-indicators .active {
-  color: #ff4301;
+  color: #330548;
 }
 
 .navbar-light .navbar-toggler-icon {
@@ -32,18 +34,18 @@ a.dropdown-item.active {
 }
 
 .navbar-light .navbar-toggler {
-  color: #FFFFFF;
+  color: #330548;
   border: none;
 }
 
 header nav ul li a {
   text-transform: uppercase;
-  color: #FFFFFF !important;
+  color: #330548 !important;
 }
 
 header {
-  background: #0d0d0d;
-  opacity: 0.95;
+  background: #000000;
+  opacity: 100;
 }
 
 .header .navbar {
