@@ -16,8 +16,8 @@ query = {
  "height_cm":Ht,
  "age":Age
 }
-api_id = "API ID"
-api_key = "API KEY"
+api_id = "66e88fcd"
+api_key = "915bd34e3996d68e870d3be75c07b467"
 
 HEADERS = {"x-app-id": api_id,
 "x-app-key": api_key,

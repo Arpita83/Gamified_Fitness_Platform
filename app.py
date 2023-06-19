@@ -96,8 +96,8 @@ def submit():
     query = {
         "query": food_item,
     }
-    api_id = "API ID"
-    api_key = "API KEY"
+    api_id = "66e88fcd"
+    api_key = "915bd34e3996d68e870d3be75c07b467"
 
     headers = {
         "x-app-id": api_id,
@@ -134,8 +134,8 @@ def calculate_calories_burnt():
         "age": age
     }
 
-    api_id = "API ID"
-    api_key = "API KEY"
+    api_id = "66e88fcd"
+    api_key = "915bd34e3996d68e870d3be75c07b467"
 
     headers = {
         "x-app-id": api_id,
