@@ -32,9 +32,6 @@ def blog():
 def vid():
     return render_template('video.html')
 
-# @app.route('/meet_the_team.html')
-# def team():
-#     return render_template('meet_the_team.html')
 
 @app.route('/blog-post-1.html')
 def blog1():
