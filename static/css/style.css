@@ -129,7 +129,7 @@ body.light .preloader {
 }
 
 body.light .title-section h1 {
-  color: #666;
+  color: #b792c8;
 }
 
 body.light .title-bg {
@@ -1774,3 +1774,22 @@ body.light hr.separator {
     margin-top: 35px !important;
   }
 }
+
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  opacity: 1;
+  /* background-color: rgba(0, 0, 0, 0.65); */
+  padding: 10px;
+}
+.full-width-image {
+  width: 100%;
+}
+
+
+
