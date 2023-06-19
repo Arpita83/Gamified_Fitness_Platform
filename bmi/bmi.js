@@ -30,7 +30,10 @@ function bmi() {
     var resultElement = document.getElementById("result");
     resultElement.innerHTML = bm;
 
-    if (bm <= 24.9) {
+    if (bm <= 18.5) {
+        resultElement.style.color = "black";
+    }
+    else if (bm > 18.5 &&bm <= 24.9) {
         resultElement.style.color = "blue";
     } else if (bm > 24.9 && bm <= 29.9) {
         resultElement.style.color = "green";
