@@ -5,7 +5,8 @@
     margin-top: 55px;
     margin-left: 250px;
     padding: 10px;
-    background-color: orange;
+    /* background-color: orange; */
+    background-color: #9f78b1;
     padding-left: 30px;
     border-radius: 20px;
     font: bold;
@@ -53,7 +54,10 @@
 #result{
     font-size: 35px;
     margin-left: 210px;
-    color: blue;
+    /* color: blue; */
+    text-shadow: 2px 2px 5px white;
+    font-weight: bold;
+    /* text-shadow: ; */
 }
 #submit{
     width: 150px;
@@ -62,8 +66,8 @@
     margin-top: 50px;
     border-radius: 20px;
     border-style: none;
-    background-color: rgb(132, 5, 132);
-    color: black;
+    background-color:#330548;
+    color: white;
     font-size: 25px;
     text-align: center;
 }
