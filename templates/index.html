@@ -8,6 +8,18 @@
   <title>FitBeat</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style_f.css" />
+    <link
+    rel="Tab icon"
+    href="/static/img/favicon.png"
+    type="image/png"
+  />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    rel="stylesheet"
+  />
+  <script src="/static/js/main.js"></script>
+  <script src="/static/js/chat.js"></script>
   <link rel="stylesheet" href="/static/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/css/animate-css/animate.css">
   <link rel="stylesheet" href="/static/css/custom-css/footer.css">
@@ -82,7 +94,7 @@
       </div>
     </div>
   </section>
-
+<!-- 
   <footer class="footer">
 
     <div class="container-fluid custom-wrapper"> 
@@ -127,7 +139,7 @@
       </div>
     </div>
     </div> -->
-  </footer> 
+  <!-- </footer>  -->
 
 
   <script src="/static/js/jquery.js"></script>
@@ -140,7 +152,87 @@
   <script>
     new WOW().init();
   </script>
+<!-- Popup chat window -->
 
+    <!-- chat open -->
+    <div class="chat-bar-open" id="chat-open">
+      <button
+        id="chat-open-button"
+        type="button"
+        class="collapsible close"
+        onclick="chatOpen()"
+      >
+        <img src="/static/img/favicon.png" alt="FitBeat" />
+      </button>
+    </div>
+
+    <!-- chat close -->
+    <div class="chat-bar-close" id="chat-close">
+      <button
+        id="chat-close-button"
+        type="button"
+        class="collapsible close"
+        onclick="chatClose()"
+      >
+        <i class="material-icons-outlined"> close </i>
+      </button>
+    </div>
+
+    <!-- chat-window 1 -->
+    <div class="chat-window" id="chat-window1">
+      <div class="hi-there">
+        <p class="p1">Hi There!</p>
+        <br />
+        <p class="p2">Hello Ask Us Anythig, Share Your<br />Feedback.</p>
+      </div>
+      <div class="start-conversation">
+        <h1>Start a Conversation</h1>
+        <p>The FitBeat team typically replies in few minutes.</p>
+        <button
+          class="new-conversation"
+          type="button"
+          onclick="openConversation()"
+        >
+          <span>New Conversation</span
+          ><i class="material-icons-outlined"> send </i>
+        </button>
+      </div>
+    </div>
+
+    <!-- chat chat-window 2 -->
+    <div class="chat-window2" id="chat-window2">
+      <div class="message-box" id="messageBox">
+        <div class="hi-there">
+          <p class="p1">Hi There!</p>
+          
+          <p class="p2">The team typically replies in few minutes.</p>
+        </div>
+      </div>
+      <div class="input-box">
+        <div class="surveysparrow">
+          <img src="" />
+          <p></p>
+        </div>
+        <div class="write-reply">
+          <input
+            class="inputText"
+            type="text"
+            id="textInput"
+            placeholder="Write a reply..."
+          />
+        </div>
+        <div class="send-button">
+          <button
+            type="submit"
+            class="send-message"
+            id="send"
+            onclick="userResponse()"
+          >
+            <i class="material-icons-outlined"> send </i>
+          </button>
+        </div>
+      </div>
+    </div>
 
 </body>
 
