@@ -175,7 +175,7 @@ body.light.portfolio .slideshow ul > li:after {
 }
 
 body.light.portfolio .slideshow {
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 body.light.contact .contactform input[type=text],
@@ -315,6 +315,7 @@ body.light hr.separator {
     top: 31px;
   }
 }
+
 /*** Buttons ***/
 .btn {
   box-shadow: none !important;
@@ -800,7 +801,7 @@ body.light hr.separator {
 
 .portfolio .slideshow {
   position: fixed;
-  background: rgba(0,0,0,0.85);
+  background: rgba(212, 156, 222, 0.35);
   width: 100%;
   height: 100%;
   top: 0;
@@ -864,7 +865,7 @@ body.light hr.separator {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(212, 156, 222, 0.45);
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   z-index: 111;
@@ -881,7 +882,7 @@ body.light hr.separator {
 .portfolio .slideshow figure {
   width: 100%;
   height: 100%;
-  background: #252525;
+  background: #330548;
   padding: 30px;
   overflow: auto;
   border-radius: 10px;
@@ -941,7 +942,7 @@ body.light hr.separator {
 
 .portfolio .slideshow .carousel-indicators {
   bottom: 0;
-  background: rgba(0,0,0,.4);
+  background: rgba(0,0,0,.7);
   padding: 10px 0;
   margin: 0;
 }
@@ -1294,6 +1295,9 @@ body.light hr.separator {
 
   .btn.btn-contact:before {
     content: "\f1ec";
+  }
+  .btn.btn-gamepad:before {
+    content: "\f11b";
   }
 
   .btn span {

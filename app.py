@@ -8,9 +8,13 @@ app=Flask(__name__)
 # def welcome():
 #     return render_template('index_f.html')
 
-# @app.route('/index.html')
-# def index():
-#     return render_template('index_f.html')
+@app.route('/index.html')
+def index():
+    return render_template('index.html')
+
+@app.route('/bmi_final.html')
+def bmi():
+    return render_template('bmi_final.html')
 
 @app.route('/about.html')
 def About():
@@ -111,6 +115,36 @@ def submit():
         serving_qty = food["serving_qty"]
         serving_unit = food["serving_unit"]
         return render_template('result.html', cal=cal)
+
+@app.route('/bmi', methods=['POST'])
+def bmi_res():
+    output = request.form.to_dict()
+    height = int(output['height'])
+    weight = int(output['weight'])
+    height_ = int(height) / 100
+    bmi = (weight / (height ** 2)) * 10000
+    if bmi <= 18.5:
+        bmi_ = 'Underweight'
+        bmi__ = 'Underweight'
+
+    elif 18.5 < bmi <= 24.9:
+        bmi_ = 'Normal'
+        bmi__ = 'Normal'
+
+    elif 25 <= bmi <= 29.9:
+        bmi_ = 'Overweight'
+        bmi__ = 'Overweight'
+
+    elif 30 <= bmi <= 39.9:
+        bmi_ = 'Obese'
+        bmi__ = 'Obese'
+    elif bmi >= 40:
+        bmi_ = 'Morbidly'
+        bmi__ = 'Morbidly Obese'
+    else:
+        bmi_ = 'Incorrect'
+        bmi__ = 'Incorrect input'
+    return render_template('bmi.html', bmi=round(bmi,2), bmi_ = bmi_, bmi__ = bmi__)
     
 @app.route('/result', methods=['POST'])
 def calculate_calories_burnt():
@@ -221,7 +255,7 @@ app.static_folder = 'static'
 
 @app.route("/")
 def home():
-    return render_template("index_f.html")
+    return render_template("index.html")
 
 @app.route("/get")
 def get_bot_response():
