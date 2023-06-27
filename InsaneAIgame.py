@@ -18,8 +18,8 @@ pose = mp_pose.Pose(static_image_mode=True, min_detection_confidence=0.3, model_
 mp_drawing = mp.solutions.drawing_utils
 
 #setting landmarks for lefthand, righthand, leftleg, rightleg
-bodyparts = ["left hand","rigt hand","left leg","right leg"]
-body_landmarks = {"left hand":19,"rigt hand":20,"left leg":31,"right leg":32}
+bodyparts = ["left hand","right hand","left leg","right leg"]
+body_landmarks = {"left hand":19,"right hand":20,"left leg":31,"right leg":32}
 
 
 def generate_random_coordinates(h,w):
@@ -122,15 +122,15 @@ def videosetup():
     points = 0
 
 
-    # coinImg = cv2.imread("COIN.png")
-    # coinImg = cv2.resize(coinImg, (50,50), interpolation = cv2.INTER_AREA)
+    coinImg = cv2.imread("COIN.png")
+    coinImg = cv2.resize(coinImg, (100,100), interpolation = cv2.INTER_AREA)
     # coinImg = cv2.resize(coinImg,(50,50),fx=0,fy=0, interpolation = cv2.INTER_AREA)
-    import cv2
-    img = cv2.imread("COIN.png")
-    if img is None:
-        print("Image not loaded. Check the file path.")
-    else:
-        print("Image loaded successfully. Shape:", img.shape)
+    # import cv2
+    # img = cv2.imread("COIN.png")
+    # if img is None:
+    #     print("Image not loaded. Check the file path.")
+    # else:
+    #     print("Image loaded successfully. Shape:", img.shape)
 
     time0 = time()
     # Iterate until the video is accessed successfully.
@@ -170,8 +170,8 @@ def videosetup():
         cv2.putText(frame, "Touch with: "+s, (430, 30),cv2.FONT_HERSHEY_PLAIN, 2, (0, 165, 255), 3)
         
         height, width, channels = coinImg.shape
-        offset = np.array((y-25,x-25)) #top-left point from which to insert the smallest image. height first, from the top of the window
-        frame[offset[0]:offset[0] + 50, offset[1]:offset[1]+ 50] = coinImg
+        offset = np.array((y-50,x-50)) #top-left point from which to insert the smallest image. height first, from the top of the window
+        frame[offset[0]:offset[0] + 100, offset[1]:offset[1]+ 100] = coinImg
         
         ##########################################################################################
         #print(s,x,y)    
@@ -183,7 +183,7 @@ def videosetup():
             y_bodypart = landmarks[body_landmarks[s]][1]
             #print(x_bodypart,y_bodypart)
             
-            if x-25 <= x_bodypart and x_bodypart <= x+25 and y-25 <= y_bodypart and y_bodypart <= y+25:
+            if x-50 <= x_bodypart and x_bodypart <= x+50 and y-50 <= y_bodypart and y_bodypart <= y+50:
                 touched = True
 
         # Set the time for this frame to the current time.

@@ -1,6 +1,13 @@
 ### Integrate HTML With Flask
 ### HTTP verb GET And POST
 from flask import Flask,redirect,url_for,render_template,request
+import math
+import cv2
+import numpy as np
+from time import time
+import random
+import mediapipe as mp
+import matplotlib.pyplot as plt
 
 app=Flask(__name__)
 
