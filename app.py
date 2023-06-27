@@ -269,6 +269,39 @@ def get_bot_response():
     userText = request.args.get('msg')
     return chatbot_response(userText)
 
+@app.route('/rapidmoves', methods=['GET'])
+def open_rapidmoves():
+    return render_template('InsaneAIgame.html')
+
+@app.route('/posesurfers', methods=['GET'])
+def posesurfers():
+    return render_template('posesurfers.html')
+
+@app.route('/poseperfect', methods=['GET'])
+def rapidmoves():
+    return render_template('poseperfect.html')
+camera=cv2.VideoCapture(0)
+
+def generate_frames():
+    while True:
+            
+        ## read the camera frame
+        success,frame=camera.read()
+        if not success:
+            break
+        else:
+            ret,buffer=cv2.imencode('.jpg',frame)
+            frame=buffer.tobytes()
+
+        yield(b'--frame\r\n'
+                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+from flask import Flask,render_template,Response
+
+@app.route('/video')
+def video():
+    return Response(generate_frames(),mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
 
 if __name__=='__main__':
     app.run(debug=True)
