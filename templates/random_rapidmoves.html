@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rapid Moves</title>
+  </head>
+  <body>
+    <h1>Rapid Moves</h1>
+    <div>
+      <img id="video" src="{{ url_for('videofeed') }}" width="640" height="480">
+      <p id="points">Points: 0</p>
+    </div>
+    <script>
+      var points = 0;
+      var pointsElement = document.getElementById("points");
+      var videoElement = document.getElementById("video");
+
+      videoElement.addEventListener("click", function () {
+        points++;
+        pointsElement.innerHTML = "Points: " + points;
+      });
+    </script>
+  </body>
+</html>
