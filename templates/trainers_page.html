@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Fitness Trainers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Template Google Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700" rel="stylesheet">
+
+    <!-- Template CSS Files -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/circle.css" rel="stylesheet">
+    <link href="/static/css/fm.revealator.jquery.min.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/css/preloader.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+
+    <!-- CSS Skin File -->
+    <link href="/static/css/skin.css" rel="stylesheet">
+
+    <!-- <link rel="shortcut icon" href="images/favicon.png"> -->
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+
+    <!-- Live Style Switcher - demo only -->
+
+    <link rel="stylesheet" type="text/css" href="/static/css/styleswitcher.css" />
+
+    <!-- Modernizr JS File -->
+    <script src="/static/js/modernizr.custom.js"></script>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    
+        .member {
+            flex-basis: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            perspective: 1000px;
+            margin-right: 20px; /* Add a right margin to create a gap between cards */
+        }
+    
+        .member:last-child {
+            margin-right: 0; /* Remove the right margin from the last card to avoid extra gap */
+        }
+    
+        .member img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+        }
+    
+        .member .front {
+            backface-visibility: hidden;
+        }
+    
+        .member .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black; /* Change the background color to your desired color */
+            color: white; /* Change the text color on the back side if needed */
+            transform: rotateY(180deg);
+            transition: transform 0.5s;
+            backface-visibility: hidden;
+        }
+    
+        .member:hover .front {
+            transform: rotateY(180deg);
+        }
+    
+        .member:hover .back {
+            transform: rotateY(0deg);
+        }
+    
+        .member .text {
+            margin-top: 10px;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px;
+            transition: opacity 0.3s ease;
+        }
+    
+        .member .text p {
+            margin: 0;
+        }
+    
+        .custom-line {
+            border: none;
+            height: 2px;
+            background-color: #b792c8;
+        }
+    </style>
+</head>
+
+<body class="blog">
+    <!-- Live Style Switcher Starts - demo only -->
+    <div id="switcher" class="">
+        <div class="content-switcher">
+            <h4>STYLE SWITCHER</h4>
+            <ul>
+                <li>
+                    <a href="#" onclick="changeskin('purple');" title="purple" class="color"><img
+                            src="/static/img/styleswitcher/purple.png" alt="purple" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('red');" title="red" class="color"><img
+                            src="/static/img/styleswitcher/red.png" alt="red" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('blueviolet');" title="blueviolet" class="color"><img
+                            src="/static/img/styleswitcher/blueviolet.png" alt="blueviolet" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('blue');" title="blue" class="color"><img
+                            src="/static/img/styleswitcher/blue.png" alt="blue" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('goldenrod');" title="goldenrod" class="color"><img
+                            src="/static/img/styleswitcher/goldenrod.png" alt="goldenrod" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('magenta');" title="magenta" class="color"><img
+                            src="/static/img/styleswitcher/magenta.png" alt="magenta" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('yellowgreen');" title="yellowgreen" class="color"><img
+                            src="/static/img/styleswitcher/yellowgreen.png" alt="yellowgreen" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('orange');" title="orange" class="color"><img
+                            src="/static/img/styleswitcher/orange.png" alt="orange" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('green');" title="green" class="color"><img
+                            src="/static/img/styleswitcher/green.png" alt="green" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('yellow');" title="yellow" class="color"><img
+                            src="/static/img/styleswitcher/yellow.png" alt="yellow" /></a>
+                </li>
+            </ul>
+
+            <div id="hideSwitcher">&times;</div>
+        </div>
+    </div>
+    <div id="showSwitcher" class="styleSecondColor"><i class="fa fa-cog fa-spin"></i></div>
+    <!-- Live Style Switcher Ends - demo only -->
+    <!-- Header Starts -->
+    <header class="header" id="navbar-collapse-toggle">
+        <!-- Fixed Navigation Starts -->
+        <ul class="icon-menu d-none d-lg-block revealator-slideup revealator-once revealator-delay1">
+            <li class="icon-box">
+                <i class="fa fa-home"></i>
+                <a href="index.html">
+                    <h2>Home</h2>
+                </a>
+            </li>
+            <li class="icon-box active">
+                <i class="fa fa-leaf"></i>
+                <a href="about.html">
+                    <h2>About</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-gamepad"></i>
+                <a href="games.html">
+                    <h2>Games</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-calculator"></i>
+                <a href="Calorie-Counter.html">
+                    <h2>Calorie_Counter</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-balance-scale"></i>
+                <a href="bmi_final.html">
+                    <h2>BMI_Calculator</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-clipboard"></i>
+                <a href="blog.html">
+                    <h2>Health_Blogs</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-link"></i>
+                <a href="video.html">
+                    <h2>Health_Links</h2>
+                </a>
+            </li>
+            <!-- <li class="icon-box">
+                <i class="fa fa-user"></i>
+                <a href="meet_the_team.html">
+                    <h2>Meet_The_Team</h2>
+                </a>
+            </li> -->
+
+        </ul>
+        <!-- Fixed Navigation Ends -->
+        <!-- Mobile Menu Starts -->
+        <nav role="navigation" class="d-block d-lg-none">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul class="list-unstyled" id="menu">
+                    <li><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+                    <li class="active"><a href="about.html"><i class="fa fa-pagelines"></i><span>About</span></a></li>
+                    <li><a href="games.html"><i class="fa fa-gamepad"></i><span>Game</span></a></li>
+                    <li><a href="Calorie-Counter.html"><i class="fa fa-calculator"></i><span>Calorie Counter</span></a>
+                    </li>
+                    <li><a href="bmi_final.html"><i class="fa fa-balance-scale"></i><span>BMI Calculator</span></a>
+                    </li>
+                    <li><a href="blog.html"><i class="fa fa-pencil"></i><span>Health Blogs</span></a></li>
+                    <li><a href="video.html"><i class="fa fa-external-link"></i><span>Health Links</span></a></li>
+                    <!-- <li><a href="meet_the_team.html"><i class="fa fa-user"></i><span>The Team</span></a> -->
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <!-- Mobile Menu Ends -->
+    </header>
+    <section class="title-section text-left text-sm-center revealator-slideup revealator-once revealator-delay1">
+        <h1>Fitness<span> Trainers</span></h1>
+        <span class="title-bg">Fitbeat</span>
+        <!-- <h3>get Fit to the Beat</h3> -->
+    </section>
+    <section class="main-content revealator-slideup revealator-once revealator-delay1">
+        <div class="container">
+            <div class="row">
+                <!-- <hr class="custom-line"> -->
+                <!-- Article Starts -->
+                <article class="col-30">
+                    <h1 class="text-uppercase text-capitalize">
+                        <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3" style = "color: #b792c8;">
+                        <center><h2><u>Welcome to FitBeat!</h2></u></center></h3>
+                    </h1>
+                    <!-- Meta Starts 
+                    <div class="meta open-sans-font">
+                        <h5><span><p class="open-sans-font mb-3">
+                             <img src="/static/img/home.jpg" class="img-fluid" alt="Blog image" /> 
+                                <center>Join our immersive world of gamified fitness, where you can level up your health
+                                    while having fun. With FitBeat, you'll enjoy the perfect fusion of gaming and
+                                    exercise, helping you stay fit, motivated, and entertained.</center></p>
+                            </span></h5>
+
+                    </div>
+                     -->
+                    <!-- Article Content Starts -->
+
+                    
+                
+                    <!-- <section class="title-section text-left text-sm-center revealator-slideup revealator-once revealator-delay1">
+
+                        <h1>Meet the <span>Team</span></h1>
+                        <span class="title-bg">FitBeat</span>
+                
+                    </section> -->
+                    <!-- Page Title Ends -->
+                    <!-- Main Content Starts -->
+                    <!-- 
+                    <h1 class="text-uppercase text-capitalize">
+                        <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3" style = "color: #b792c8;">
+                        <center><h2><u>Meet the amazing team!</h2></u></center></h3>
+                    </h1>
+                     -->
+                    <section class="main-content revealator-slideup revealator-once revealator-delay1">
+                        
+                    
+                        <br>
+                        <div class="container">
+                            <!-- Articles Starts -->
+                            <div class="row">
+                                <!-- Article Starts -->
+                                <section class="main-content revealator-slideup revealator-once revealator-delay1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <!-- Member Starts -->
+                                            <div class="member">
+                                                <div class="front">
+                                                    <img src="/static/img/team/suhana.jpeg" alt="Trainer 1">
+                                                </div>
+                                                <div class="back"></div>
+                                                <div class="text">
+                                                    <p>Name: John Smith</p>
+                                                    <p>Specialties: Weight loss, bodybuilding, cardio</p>
+                                                    <p>Rate: $50 per hour</p>
+                                                    <br>
+                                                    <p><b>Client testimonials:</b></p>
+                                                    <p>"John helped me lose 20 pounds in 6 weeks. He's tough but fair, and he really knows his stuff." - Jane Doe</p>
+                                                </div>
+                                            </div>
+                                            <!-- Member Ends -->
+                            <!-- Member Starts -->
+                            <div class="member">
+                                <div class="front">
+                                    <img src="/static/img/team/anushka.jpeg" alt="Trainer 2">
+                                </div>
+                                <div class="back"></div>
+                                <div class="text">
+                                    <p>Trainer 2</p>
+                                </div>
+                            </div>
+                            <!-- Member Ends -->
+            
+                            <!-- Member Starts -->
+                            <div class="member">
+                                <div class="front">
+                                    <img src="/static/img/team/arpita.jpeg" alt="Trainer 3">
+                                </div>
+                                <div class="back"></div>
+                                <div class="text">
+                                    <p>Trainer 3</p>
+                                </div>
+                            </div>
+                            <!-- Member Ends -->
+                        </div>
+                    </div>
+                </section>
+                <!-- Main Content Ends -->
+            </div></div></section></article></div></div></section>
+                                  <script>
+                                      var members = document.querySelectorAll(".member");
+                              
+                                      for (var i = 0; i < members.length; i++) {
+                                          members[i].addEventListener("mouseenter", function () {
+                                              this.querySelector(".front").style.transform = "rotateY(-180deg)";
+                                              this.querySelector(".back").style.opacity = 1;
+                                              this.querySelector(".text").style.opacity = 1;
+                                          });
+                              
+                                          members[i].addEventListener("mouseleave", function () {
+                                              this.querySelector(".front").style.transform = "rotateY(0deg)";
+                                              this.querySelector(".back").style.opacity = 0;
+                                              this.querySelector(".text").style.opacity = 0;
+                                          });
+                                      }
+                                  </script>
+            <script>
+                // Add event listeners for hover effect
+                var members = document.getElementsByClassName("member");
+                for (var i = 0; i < members.length; i++) {
+                    members[i].addEventListener("mouseenter", function () {
+                        this.querySelector("img").style.transform = "rotateY(180deg)";
+                        this.querySelector(".text").style.opacity = 1;
+                    });
+        
+                    members[i].addEventListener("mouseleave", function () {
+                        this.querySelector("img").style.transform = "rotateY(0deg)";
+                        this.querySelector(".text").style.opacity = 0;
+                    });
+                }
+            </script>
+
+    <script src="/static/js/jquery-3.5.0.min.js"></script>
+    <script src="/static/js/styleswitcher.js"></script>
+    <script src="/static/js/preloader.min.js"></script>
+    <script src="/static/js/fm.revealator.jquery.min.js"></script>
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/js/masonry.pkgd.min.js"></script>
+    <script src="/static/js/classie.js"></script>
+    <script src="/static/js/cbpGridGallery.js"></script>
+    <script src="/static/js/jquery.hoverdir.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/custom.js"></script>
+
+</body>
+</html>
