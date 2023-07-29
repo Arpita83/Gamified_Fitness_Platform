@@ -1,0 +1,129 @@
+{
+    "intents": [
+    {
+    "tag": "greeting",
+    "patterns": [
+    "Hi there",
+    "How are you",
+    "Is anyone there?",
+    "Hey",
+    "Hola",
+    "Hello",
+    "Good day"
+    ],
+    "responses": [
+    "Hello, thanks for asking",
+    "Good to see you again",
+    "Hi there, how can I help?"
+    ],
+    "context": [""]
+    },
+    {
+    "tag": "goodbye",
+    "patterns": [
+    "Bye",
+    "See you later",
+    "Goodbye",
+    "Nice chatting to you, bye",
+    "Till next time"
+    ],
+    "responses": [
+    "See you!",
+    "Have a nice day",
+    "Bye! Come back again soon."
+    ],
+    "context": [""]
+    },
+    {
+    "tag": "thanks",
+    "patterns": [
+    "Thanks",
+    "Thank you",
+    "That's helpful",
+    "Awesome, thanks",
+    "Thanks for helping me"
+    ],
+    "responses": ["Happy to help!", "Any time!", "My pleasure"],
+    "context": [""]
+    },
+    {
+    "tag": "noanswer",
+    "patterns": [],
+    "responses": [
+    "Sorry, can't understand you",
+    "Please give me more info",
+    "Not sure I understand"
+    ],
+    "context": [""]
+    },
+    {
+    "tag": "options",
+    "patterns": [
+    "How can you help me?",
+    "What can you do?",
+    "What services do you provide?",
+    "How can you assist me?",
+    "What support is offered?"
+    ],
+    "responses": [
+    "I can provide guidance on fitness programs, track your workouts, offer nutrition advice, and help you set and achieve fitness goals.",
+    "I can assist with fitness program recommendations, workout tracking, nutrition guidance, and goal setting.",
+    "I offer support for fitness programs, workout tracking, nutrition tips, and goal management."
+    ],
+    "context": [""]
+    },
+    {
+    "tag": "fitness_programs",
+    "patterns": [
+    "What fitness programs do you have?",
+    "Tell me about the available fitness programs",
+    "What types of workouts do you offer?",
+    "Can you recommend a fitness program?"
+    ],
+    "responses": [
+    "We have a variety of fitness programs tailored to different goals and fitness levels. Whether you're interested in weight loss, muscle building, or overall fitness, we have something for you. Let me know your preferences, and I'll recommend a suitable program.",
+    "Our fitness programs include cardio, strength training, HIIT, yoga, and more. Each program is designed to target specific fitness goals. If you let me know your preferences, I can recommend a program that suits you best."
+    ],
+    "context": [""]
+    },
+    {
+    "tag": "workout_tracking",
+    "patterns": [
+    "How can I track my workouts?",
+    "Is there a way to monitor my exercise progress?",
+    "What tools do you provide for workout tracking?"
+    ],
+    "responses": [
+    "We offer a workout tracking feature that allows you to log and monitor your exercises. You can record details such as duration, intensity, and specific exercises performed. It's a great way to keep track of your progress and stay motivated.",
+    "With our workout tracking feature, you can easily log your workouts and keep a record of your exercise history. It's a helpful tool to monitor your progress and make adjustments to your fitness routine."
+    ],
+    "context": [""]
+    },
+    {
+    "tag": "nutrition_guidance",
+    "patterns": [
+    "Can you provide nutrition advice?",
+    "What kind of diet should I follow?",
+    "How can I improve my eating habits?"
+    ],
+    "responses": [
+    "Proper nutrition is essential for achieving your fitness goals. I can provide personalized nutrition advice based on your needs and preferences. Let me know if you have any specific dietary requirements or if you'd like general guidance.",
+    "Nutrition plays a vital role in fitness. I can offer guidance on healthy eating habits, meal planning, and dietary adjustments to support your fitness journey. If you have any dietary restrictions or preferences, feel free to let me know."
+    ],
+    "context": [""]
+    },
+    {
+    "tag": "goal_setting",
+    "patterns": [
+    "How can I set fitness goals?",
+    "What are some examples of fitness goals?",
+    "Can you help me establish workout targets?"
+    ],
+    "responses": [
+    "Setting fitness goals is important for staying motivated and tracking progress. I can help you define realistic and achievable goals based on your current fitness level and aspirations. Let's discuss your objectives, and together we'll create a plan to reach them.",
+    "Fitness goals can vary from weight loss and muscle gain to improving endurance or flexibility. It's essential to set goals that are specific, measurable, attainable, relevant, and time-bound (SMART goals). Let me know your objectives, and I'll assist you in establishing suitable targets."
+    ],
+    "context": [""]
+    }
+    ]
+    }

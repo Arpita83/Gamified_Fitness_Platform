@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Meet the Team</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Template Google Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700" rel="stylesheet">
+
+    <!-- Template CSS Files -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/circle.css" rel="stylesheet">
+    <link href="/static/css/fm.revealator.jquery.min.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/css/preloader.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+
+    <!-- CSS Skin File -->
+    <link href="/static/css/skin.css" rel="stylesheet">
+
+    <!-- <link rel="shortcut icon" href="images/favicon.png"> -->
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+
+    <!-- Live Style Switcher - demo only -->
+
+    <link rel="stylesheet" type="text/css" href="/static/css/styleswitcher.css" />
+
+    <!-- Modernizr JS File -->
+    <script src="/static/js/modernizr.custom.js"></script>
+</head>
+
+<body class="blog">
+    <!-- Live Style Switcher Starts - demo only -->
+    <div id="switcher" class="">
+        <div class="content-switcher">
+            <h4>STYLE SWITCHER</h4>
+            <ul>
+                <li>
+                    <a href="#" onclick="changeskin('purple');" title="purple" class="color"><img
+                            src="/static/img/styleswitcher/purple.png" alt="purple" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('red');" title="red" class="color"><img
+                            src="/static/img/styleswitcher/red.png" alt="red" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('blueviolet');" title="blueviolet" class="color"><img
+                            src="/static/img/styleswitcher/blueviolet.png" alt="blueviolet" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('blue');" title="blue" class="color"><img
+                            src="/static/img/styleswitcher/blue.png" alt="blue" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('goldenrod');" title="goldenrod" class="color"><img
+                            src="/static/img/styleswitcher/goldenrod.png" alt="goldenrod" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('magenta');" title="magenta" class="color"><img
+                            src="/static/img/styleswitcher/magenta.png" alt="magenta" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('yellowgreen');" title="yellowgreen" class="color"><img
+                            src="/static/img/styleswitcher/yellowgreen.png" alt="yellowgreen" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('orange');" title="orange" class="color"><img
+                            src="/static/img/styleswitcher/orange.png" alt="orange" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('green');" title="green" class="color"><img
+                            src="/static/img/styleswitcher/green.png" alt="green" /></a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeskin('yellow');" title="yellow" class="color"><img
+                            src="/static/img/styleswitcher/yellow.png" alt="yellow" /></a>
+                </li>
+            </ul>
+
+            <div id="hideSwitcher">&times;</div>
+        </div>
+    </div>
+    <div id="showSwitcher" class="styleSecondColor"><i class="fa fa-cog fa-spin"></i></div>
+    <!-- Live Style Switcher Ends - demo only -->
+    <!-- Header Starts -->
+    <header class="header" id="navbar-collapse-toggle">
+        <!-- Fixed Navigation Starts -->
+        <ul class="icon-menu d-none d-lg-block revealator-slideup revealator-once revealator-delay1">
+            <li class="icon-box">
+                <i class="fa fa-home"></i>
+                <a href="index.html">
+                    <h2>Home</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-leaf"></i>
+                <a href="about.html">
+                    <h2>About</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-gamepad"></i>
+                <a href="games.html">
+                    <h2>Games</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-calculator"></i>
+                <a href="Calorie-Counter.html">
+                    <h2>Calorie_Counter</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-clipboard"></i>
+                <a href="blog.html">
+                    <h2>Health_Blogs</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-link"></i>
+                <a href="video.html">
+                    <h2>Health_Links</h2>
+                </a>
+            </li>
+            <!-- <li class="icon-box active">
+                <i class="fa fa-user"></i>
+                <a href="meet_the_team.html">
+                    <h2>Meet_The_Team</h2>
+                </a>
+            </li> -->
+
+        </ul>
+        <!-- Fixed Navigation Ends -->
+        <!-- Mobile Menu Starts -->
+        <nav role="navigation" class="d-block d-lg-none">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul class="list-unstyled" id="menu">
+                    <li><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+                    <li><a href="about.html"><i class="fa fa-pagelines"></i><span>About</span></a></li>
+                    <li><a href="games.html"><i class="fa fa-gamepad"></i><span>Game</span></a></li>
+                    <li><a href="Calorie-Counter.html"><i class="fa fa-calculator"></i><span>Calorie Counter</span></a>
+                    </li>
+                    <li><a href="blog.html"><i class="fa fa-pencil"></i><span>Health Blogs</span></a></li>
+                    <li><a href="video.html"><i class="fa fa-external-link"></i><span>Health Links</span></a></li>
+                    <!-- <li class="active"><a href="meet_the_team.html"><i class="fa fa-user"></i><span>The Team</span></a> -->
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <!-- Mobile Menu Ends -->
+    </header>
+    <!-- Header Ends -->
+    <!-- Page Title Starts -->
+    <section class="title-section text-left text-sm-center revealator-slideup revealator-once revealator-delay1">
+
+        <h1>Meet the <span>Team</span></h1>
+        <span class="title-bg">FitBeat</span>
+
+    </section>
+    <!-- Page Title Ends -->
+    <!-- Main Content Starts -->
+    <section class="main-content revealator-slideup revealator-once revealator-delay1">
+        <div class="container">
+            <!-- Articles Starts -->
+            <div class="row">
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.linkedin.com/in/ms-suhana-491949224/"
+                                class="d-block position-relative overflow-hidden">
+                                <img src="/static/img/team/suhana.jpeg" class="img-fluid" alt="Blog Post">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://www.linkedin.com/in/ms-suhana-491949224/">Suhana</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>
+                                    Meet Suhana, our talented team leader for the FitBeat project. With expertise in web
+                                    development and machine learning, she played a crucial role in driving our success.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.linkedin.com/in/anushka-bhandarkar-21094622a"
+                                class="d-block position-relative overflow-hidden">
+                                <img src="/static/img/team/anushka.jpeg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://www.linkedin.com/in/anushka-bhandarkar-21094622a">Anushka Bhandarkar</a>
+                                </h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Introducing Anushka, our web developer, who excelled in pushing boundaries,
+                                    delivering
+                                    exceptional web experiences, and exploring her creative prowess.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.linkedin.com/in/arpita-4b867722b/"
+                                class="d-block position-relative overflow-hidden">
+                                <img src="/static/img/team/arpita.jpeg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://www.linkedin.com/in/arpita-4b867722b/">Arpita</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Meet Arpita, a talented full-stack developer of our FitBeat team. With her
+                                    exceptional skills, Arpita played a crucial role in building and
+                                    maintaining FitBeat.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.linkedin.com/in/harinee-j-298529234/"
+                                class="d-block position-relative overflow-hidden">
+                                <img src="/static/img/team/harinee.jpeg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://www.linkedin.com/in/harinee-j-298529234/">Harinee J</a></h3>
+                                <div class="entry-content open-sans-font">
+                                    <p>
+                                        Introducing Harinee, a valued member of our FitBeat team. With a passion for
+                                        ML, she brought her expertise and enthusiasm to help us achieve
+                                        our goals.</p>
+                                </div>
+                            </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+                <!-- Article Starts -->
+                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+                    <article class="post-container">
+                        <div class="post-thumb">
+                            <a href="https://www.linkedin.com/in/tanishka-yagneshwar"
+                                class="d-block position-relative overflow-hidden">
+                                <img src="/static/img/team/tanishka.jpeg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header">
+                                <h3><a href="https://www.linkedin.com/in/tanishka-yagneshwar">Tanishka Yagneshwar</a></h3>
+                            </div>
+                            <div class="entry-content open-sans-font">
+                                <p>Meet Tanishka, our enthusiastic ML aficionado, delved into pushing boundaries, delivering
+                                    ML solutions and exploring her passion for data.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article Ends -->
+
+                <!-- Article Ends -->
+                <!-- Pagination Starts -->
+                <div class="col-12 mt-4">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center mb-0">
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <!-- <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li> -->
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Pagination Ends -->
+            </div>
+            <!-- Articles Ends -->
+        </div>
+
+    </section>
+
+    <!-- Template JS Files -->
+    <script src="/static/js/jquery-3.5.0.min.js"></script>
+    <script src="/static/js/styleswitcher.js"></script>
+    <script src="/static/js/preloader.min.js"></script>
+    <script src="/static/js/fm.revealator.jquery.min.js"></script>
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/js/masonry.pkgd.min.js"></script>
+    <script src="/static/js/classie.js"></script>
+    <script src="/static/js/cbpGridGallery.js"></script>
+    <script src="/static/js/jquery.hoverdir.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/custom.js"></script>
+
+</body>
+
+</html>
