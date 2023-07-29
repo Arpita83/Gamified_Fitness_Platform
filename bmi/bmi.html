@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type = "text/css" href = "bmi.css" />
+        
+        <title>BMI Calculator</title>
+    </head>
+    <body>
+        <div id = "pic">
+        
+            <div id = "container">
+                <h1>BMI Calculator</h1>
+                <div id = "getcenter">
+                    Height in 'cm' &nbsp;&nbsp;
+                    <input type = "text" id = "cm"/><br/>
+                    Weight in 'kg' &nbsp;&nbsp;
+                    <input type = "text" id = "kg"/><br/>
+                </div>
+                <input type = "submit" id = "submit" value = "Calculate"><br/><br/>
+                <div id = "result"></div>
+                <div id = "weightguide">
+                    <h2>BMI Weight Guide</h2>
+                    Under Weight = Less than 18.6<br/>
+                    Normal Weight = 18.6 - 24.9<br/>
+                    Over Weight = Greater than 24.9<br/>
+                    <p>BMI is an estimate of body fat and a good gauge of your risk 
+                        for diseases that can occur with more body fat</p>
+                </div>
+            </div>
+            
+            <img src="bmipic.png" alt="Image" id="image" />
+        </div>
+        <script src = "bmi.js"></script>  
+    </body>
+</html>

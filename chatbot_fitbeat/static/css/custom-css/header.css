@@ -1,0 +1,83 @@
+header {
+  background: #0D0D0D;
+  padding: 0 8.75rem;
+  z-index: 999;
+  position: relative;
+  font-style: normal !important;
+}
+
+header .container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #ff4301 !important;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: #ff916b !important;
+}
+
+a.dropdown-item.active {
+  background-color: #ff4301 !important;
+}
+
+.carousel .carousel-indicators .active {
+  color: #ff4301;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url(../../img/toggler-icon.svg);
+}
+
+.navbar-light .navbar-toggler {
+  color: #FFFFFF;
+  border: none;
+}
+
+header nav ul li a {
+  text-transform: uppercase;
+  color: #FFFFFF !important;
+}
+
+header {
+  background: #0d0d0d;
+  opacity: 0.95;
+}
+
+.header .navbar {
+  padding: 0.5rem 0;
+}
+
+.header .nav-link {
+  color: #ffffff !important;
+}
+
+header .dropdown-menu {
+  background: #000000 !important;
+  z-index: 3;
+}
+
+header .dropdown-menu a {
+  background: #000000 !important;
+  color: #FFFFFF !important;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+header .dropdown-toggle::after {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 0 1.75rem;
+  }
+
+  header img {
+    width: 50vw;
+  }
+}
