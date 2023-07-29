@@ -160,10 +160,14 @@ print('LOSS: ', loss)
 print("ACCURACY: ", accuracy)
 
 
+<<<<<<< HEAD
 #tfjs.converters.save_keras_model(model, tfjs_model_dir)
 import pickle
 
 # Assuming you have a Keras model named 'model' and a file path 'model.pkl'
 with open('model.pkl', 'wb') as f:
     pickle.dump(model, f)
+=======
+tfjs.converters.save_keras_model(model, tfjs_model_dir)
+>>>>>>> d8ee62f (Added the pose detection)
 print('tfjs model saved at ',tfjs_model_dir)
