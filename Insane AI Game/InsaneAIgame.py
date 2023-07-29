@@ -5,7 +5,9 @@ from time import time
 import random
 import mediapipe as mp
 import matplotlib.pyplot as plt
-
+from tkinter import *
+from PIL import *
+#from PIL import ImageTK, Image
 
 
 # Initializing mediapipe pose class.
@@ -95,10 +97,69 @@ def detectPose(image, pose, display=True):
 
         # Return the output image and the found landmarks.
     return output_image, landmarks
+
+root = Tk()  
+def startdisplay():
+    limit = 60
+    def selected():
+        st = clicked.get()
+        limit = 60*int(st[0])
+        videosetup(limit)
     
+    root.title('Rapid Moves')
+    root.geometry("800x600")
 
-def videosetup():
+    #bg = PhotoImage(file = "XFT6.gif")
+    '''
+    canvas = Canvas(root, width=1000, height=800)
+    canvas.pack(fill="both", expand=True)
+    canvas.create_image(0,0, image=bg, anchor="nw")
 
+    #canvas.create_text(400,250, text='Welcome to Rapid Moves!', font = ("Helvetica", 50), fill="black")
+
+    start = Button(root, text="Start")
+    start.config(width = 200, height= 100)
+    start = canvas.create_window(400,600, anchor="nw", window=start)
+    
+    '''
+    frame = Frame(root, padx = 100, pady=100, bg='#7B68EE')
+    frame.pack(padx=10, pady=10)
+    #label = Label(root, image=bg)
+    #label.place(x=0,y=0, relwidth = 1, relheight = 1)
+    
+    text = Label(root, text="Welcome to Rapid Moves!", font = ("Helvetica", 30))
+    text.pack(pady = 30)
+    rules = Label(root, text="Rules:\n\n1) Touch the coin on the screen with the body part(left hand, right hand, left leg, right leg)\n mentioned on the top of the screen to win a point\n\n2) Touch as many coins as you can within the time limit.\n\n3)Press esc if you want to quit the game.", font = ("Helvetica", 24))
+    rules.pack(pady = 30)
+    
+    time = Label(root, text="Select the time limit", font = ("Helvetica", 24))
+    time.pack(pady = 10)
+    
+    options = ['1 mins', "3 mins", "5 mins"]
+    clicked = StringVar()
+    clicked.set(options[0])
+    drop = OptionMenu(root,clicked, *options)
+    drop.config(font=("Helvetica", 25))
+    drop.pack(pady=20)
+
+    start = Button(root, text="Start", command = selected)
+    start.config(font=("Helvetica", 30))
+    start.pack(padx=5)
+    
+def enddisplay(points):
+    root.quit()
+    r = Tk()
+    r.title('Rapid Moves')
+    r.geometry("800x600")
+    
+    frame = Frame(r, padx = 100, pady=100, bg='#7B68EE')
+    frame.pack(padx=10, pady=10)
+    label = Label(r, text="Game Over\n\nCongratulations!\n\nYour score is "+str(points), font = ("Helvetica", 30))
+    label.pack(pady = 20)
+    
+    
+def videosetup(limit):
+    
     # Setup Pose function for video.
     pose_video = mp_pose.Pose(static_image_mode=False, min_detection_confidence=0.5, model_complexity=1)
 
@@ -106,13 +167,15 @@ def videosetup():
     video = cv2.VideoCapture(0)
 
     # Create named window for resizing purposes
-    cv2.namedWindow('Pose Detection', cv2.WINDOW_NORMAL)
+    
+    #cv2.namedWindow('Rapid Moves', cv2.WINDOW_NORMAL)
 
 
     # Initialize the VideoCapture object to read from a video stored in the disk.
     #video = cv2.VideoCapture('media/running.mp4')
 
     # Set video camera size
+
     video.set(3,1280)
     #video.set(4,960)
 
@@ -122,15 +185,8 @@ def videosetup():
     points = 0
 
 
-    # coinImg = cv2.imread("COIN.png")
-    # coinImg = cv2.resize(coinImg, (50,50), interpolation = cv2.INTER_AREA)
-    # coinImg = cv2.resize(coinImg,(50,50),fx=0,fy=0, interpolation = cv2.INTER_AREA)
-    import cv2
-    img = cv2.imread("COIN.png")
-    if img is None:
-        print("Image not loaded. Check the file path.")
-    else:
-        print("Image loaded successfully. Shape:", img.shape)
+    coinImg = cv2.imread("COIN.png")
+    coinImg = cv2.resize(coinImg, (50,50), interpolation = cv2.INTER_AREA)
 
     time0 = time()
     # Iterate until the video is accessed successfully.
@@ -152,11 +208,11 @@ def videosetup():
         frame_height, frame_width, _ =  frame.shape
 
         # Resize the frame while keeping the aspect ratio.
-        frame = cv2.resize(frame, (int(frame_width * (640 / frame_height)), 640))
+        frame = cv2.resize(frame, (int(frame_width * (800 / frame_height)), 800))
         frame_height, frame_width, _ =  frame.shape
         #print("frame sizE:", frame_width, frame_height)
 
-        cv2.putText(frame, "Points: "+str(points), (950,30), cv2.FONT_HERSHEY_PLAIN, 2, (0, 165, 255), 2)
+        cv2.putText(frame, "Points: "+str(points), (1200,30), cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 0), 2)
         
         global s,index,x,y
         #print("touched = ", touched)
@@ -167,7 +223,7 @@ def videosetup():
             touched = False
         
         ##########################################################################################    
-        cv2.putText(frame, "Touch with: "+s, (430, 30),cv2.FONT_HERSHEY_PLAIN, 2, (0, 165, 255), 3)
+        cv2.putText(frame, "Touch with: "+s, (520, 30),cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 0), 3)
         
         height, width, channels = coinImg.shape
         offset = np.array((y-25,x-25)) #top-left point from which to insert the smallest image. height first, from the top of the window
@@ -197,12 +253,16 @@ def videosetup():
 
             # Write the calculated number of frames per second on the frame.
             #cv2.putText(frame, 'FPS: {}'.format(int(frames_per_second)), (10, 30),cv2.FONT_HERSHEY_PLAIN, 2, (0, 255, 0), 3)
-            cv2.putText(frame, 'Time: '+str(round(time2-time0, 3)), (30, 30),cv2.FONT_HERSHEY_PLAIN, 2, (0, 165, 255), 2)
+            cv2.putText(frame, 'Time: '+str(round(time2-time0, 3)), (30, 30),cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 0), 2)
 
+        if time2-time0 >= limit:
+            break
+            
         # Update the previous frame time to this frame time.
         # As this frame will become previous frame in next iteration.
         time1 = time2
-        cv2.putText(frame, 'Click esc to exit', (910, 620),cv2.FONT_HERSHEY_PLAIN, 1.5, (0, 0, 255), 1)
+        
+        cv2.putText(frame, 'Click esc to exit', (910, 750),cv2.FONT_HERSHEY_PLAIN, 1.5, (0, 0, 255), 1)
         # Display the frame.
         cv2.imshow('Pose Detection', frame)
 
@@ -217,10 +277,13 @@ def videosetup():
             break
 
     # Release the VideoCapture object.
+    
+    cv2.putText(frame, "Game Over\nCongratulations!\n Your total points are: "+str(points), (800,300), cv2.FONT_HERSHEY_PLAIN, 2, (0, 165, 255), 2)
     video.release()
-
+    enddisplay(points)
     # Close the windows.
     cv2.destroyAllWindows()
+    
 
 
-videosetup()
+startdisplay()
