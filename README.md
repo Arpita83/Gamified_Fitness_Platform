@@ -1,6 +1,8 @@
 # FitBeat: Gamified_Fitness_Platform
 Creating a Gamified fitness platform in order to help the user enjoy games and maintain good health at the same time.  Our project idea is to provide a fitness experience that is gamified (applying gaming principles, game design techniques, and game mechanics to applications in order to improve clinical outcomes).
 
+Working link:  https://www.canva.com/design/DAFpkdPfv1c/ejHt8m3deV5qye9Brlwqig/view?utm_content=DAFpkdPfv1c&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
+
 **# Problem statement:**
 
 The pervasive use of video games and smartphones in contemporary society has contributed to the adoption of a sedentary lifestyle across all age groups. The demanding nature of modern schedules leaves individuals, particularly children, with insufficient time for engaging in physical activities. Consequently, a growing number of people are experiencing a decline in physical fitness due to reduced opportunities for exercise. This can lead to both physical as well as mental diseases. This leads to some adverse consequences such as weakening of muscles and thus proves to be a poor resort to enjoyment. Ultimately, this unhealthy trend adversely impacts individuals’ overall health, calling for urgent attention and remedial actions.
